@@ -1,8 +1,9 @@
 const express = require("express");
 const userRouter = require("./routes/users.route");
 const productRouter = require("./routes/products.route");
+require("dotenv").config();
 const app = express();
-// const PORT = 3000;
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -16,6 +17,6 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  // console.log(`Server is running at http://localhost:${PORT}`);
-  console.log(`Server is running at http://localhost`);
+  console.log(`Server is running at http://localhost:${PORT}`);
+  // console.log(`Server is running at http://localhost`);
 });

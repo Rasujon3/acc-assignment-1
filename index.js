@@ -2,7 +2,7 @@ const express = require("express");
 const userRouter = require("./routes/users.route");
 const productRouter = require("./routes/products.route");
 const app = express();
-const PORT = 3000;
+// const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -16,5 +16,6 @@ app.use((req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+  // console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server is running at http://localhost`);
 });
